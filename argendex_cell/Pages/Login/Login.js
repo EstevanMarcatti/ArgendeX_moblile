@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { TextInput, KeyboardAvoidingView, TouchableOpacity, Text, ScrollView, Image, View } from "react-native";
 import styles from "./Styles_Login.js";
+import useHeaderOptions from '../../components/Header.js'; // Importando o hook do header
 
 const LoginForm = ({ navigation }) => {
   const [email, setEmail] = useState('');
@@ -12,6 +13,7 @@ const LoginForm = ({ navigation }) => {
     console.log("Senha", Senha);
     setSenha('');
   };
+  useHeaderOptions();
 
   return (
     <KeyboardAvoidingView style={styles.Background} behavior="padding">
@@ -37,7 +39,7 @@ const LoginForm = ({ navigation }) => {
           onChangeText={setSenha}
         />
 
-        <TouchableOpacity style={styles.btnCriar} onPress={() => navigation.navigate('Calendar')}>
+        <TouchableOpacity style={styles.btnCriar} onPress={() => navigation.navigate('Calendario')}>
           <Text style={styles.Txtbtn} /*onPress={handleLogin}*/ >Logar</Text>
         </TouchableOpacity>
 

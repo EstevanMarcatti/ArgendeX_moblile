@@ -2,10 +2,13 @@ import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
 import { View, Image, TextInput } from 'react-native';
 import styles from './Styles_Calendar';
+import useHeaderOptions from '../../components/Header.js';
 
 export default function App() {
 
   const [searchTerm, setSearchTerm] = useState('');
+
+  useHeaderOptions();
 
   return (
 

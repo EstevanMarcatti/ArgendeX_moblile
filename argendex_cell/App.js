@@ -13,10 +13,10 @@ function App() {
     return (
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name=" " component={Home} />
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Cadastro" component={Cadastro} />
-          <Stack.Screen name="Calendar" component={Calendar} />
+          <Stack.Screen name="Calendario" component={Calendar} />
   
         </Stack.Navigator>
       </NavigationContainer>

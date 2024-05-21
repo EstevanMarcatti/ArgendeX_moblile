@@ -1,12 +1,17 @@
-// pages/HomeScreen.js
 import * as React from 'react';
-import { View, TextInput, Image, TouchableOpacity, Button, Text } from 'react-native';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import style from "./Style_home.js";
+import useHeaderOptions from '../../components/Header.js'; // Importando o hook do header
 
-export default function Home({ navigation }) {
+export default function Home() {
+    const navigation = useNavigation();
+    
+    // Usando o hook do header
+    useHeaderOptions();
+
     return (
-        <View style={style.Header}>
-            <Text style={style.home}>Seja bem vindo ao </Text>
+        <View style={style.background}>
             <View >
                 <Image style={style.logo} resizeMode='contain' source={require('../../assets/images/argendex.png')} />
             </View>
@@ -22,3 +27,7 @@ export default function Home({ navigation }) {
         </View>
     );
 }
+
+Home.navigationOptions = {
+    headerTitle: 'Título Personalizado', // Define o título personalizado do header
+};

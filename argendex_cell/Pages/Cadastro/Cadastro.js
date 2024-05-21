@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { View, TextInput, Image, KeyboardAvoidingView, TouchableOpacity, Button, Text} from "react-native";
 import { ScrollView } from "react-native";
 import DateTimePickerModal from "react-native-modal-datetime-picker"; // Importe o DateTimePickerModal
-
+import useHeaderOptions from '../../components/Header.js';
 import styles from "./Styles_cadastro";
 
 const CadastroForm  = ({ navigation }) => {
@@ -25,6 +25,8 @@ const CadastroForm  = ({ navigation }) => {
         setShowDatePicker(false);
         setDataNascimento(date);
     };
+
+    useHeaderOptions();
 
     return (
         <KeyboardAvoidingView style={styles.Header} behavior="padding">
@@ -50,7 +52,7 @@ const CadastroForm  = ({ navigation }) => {
                 />
             </ScrollView>
 
-            <TouchableOpacity style={styles.btnCriar}  onPress={() => navigation.navigate('Calendar')}>
+            <TouchableOpacity style={styles.btnCriar}  onPress={() => navigation.navigate('Calendario')}>
                 <Text style={styles.Txtbtn} /*onPress={handledCadastro}*/>Criar Cadastro</Text>
             </TouchableOpacity>
 
