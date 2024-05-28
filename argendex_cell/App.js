@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from './Pages/Home/Home'
 import Login from './Pages/Login/Login'
 import Cadastro from './Pages/Cadastro/Cadastro'
-import Calendar from './Pages/Calendar/Calendar'
+import TodoListScreen from './Pages/Calendar/TodoListScreen'
 import Plano from './Pages/plano/plano'
 import AddTarefa from './components/addTarefa';
 
@@ -19,7 +19,7 @@ function App() {
         <Stack.Screen name=" " component={Home} />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Cadastro" component={Cadastro} />
-        <Stack.Screen name="Calendario" component={Calendar} />
+        <Stack.Screen name="Calendario" component={TodoListScreen} />
         <Stack.Screen name="Plano" component={Plano} />
         <Stack.Screen name="AddTarefa" component={AddTarefa} />
       </Stack.Navigator>
