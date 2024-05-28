@@ -35,7 +35,7 @@ export default function App() {
       <Image style={styles.calendar_image} resizeMode='contain' source={require('./imagesCalendar/calendar_temp.png')} />
 
       <StatusBar style="auto" />
-
+      
     </View>
   );
 }
